@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="2"
+    android:versionName="1.1"
+    package="com.directionsgps.navigation123"
+    platformBuildVersionCode="25"
+    platformBuildVersionName="7.1.1">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="25" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true" />
+
+    <application
+        android:theme="@ref/0x7f0b0091"
+        android:label="@ref/0x7f080047"
+        android:icon="@ref/0x7f030002"
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.SpalshActivity">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@ref/0x7f08005d" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.MapsDetailActivity" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.SearchPlacesActivity" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.DirectionsActivity" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.CarAnimationActivity" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.MapMainActivity" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.StarterActivity" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.GetStarted" />
+
+        <activity
+            android:theme="@ref/0x7f0b0038"
+            android:label="@ref/0x7f080047"
+            android:name="com.directionsgps.navigation123.ui.mainactivities.MainActivity" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.LocationDescriptionActivity" />
+
+        <activity
+            android:theme="@ref/0x7f0b0038"
+            android:label="@ref/0x7f080047"
+            android:name="co.appsdeveloper.forecastweather.activities.MainWeatherActivity" />
+
+        <activity
+            android:theme="@ref/0x7f0b0091"
+            android:name="co.appsdeveloper.forecastweather.activities.SettingsActivity" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.StreetViewActivity" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.NotificationReceiver" />
+
+        <activity
+            android:name="com.directionsgps.navigation123.ui.mainactivities.PromotionalActivity" />
+
+        <receiver
+            android:name="co.appsdeveloper.forecastweather.widgets.ExtensiveWidgetProvider">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@ref/0x7f060000" />
+        </receiver>
+
+        <receiver
+            android:name="co.appsdeveloper.forecastweather.widgets.TimeWidgetProvider">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@ref/0x7f060002" />
+        </receiver>
+
+        <service
+            android:label="@ref/0x7f080047"
+            android:icon="@ref/0x7f0200ad"
+            android:name="co.appsdeveloper.forecastweather.widgets.DashClockWeatherExtension"
+            android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+
+            <intent-filter>
+
+                <action
+                    android:name="com.google.android.apps.dashclock.Extension" />
+            </intent-filter>
+
+            <meta-data
+                android:name="protocolVersion"
+                android:value="2" />
+
+            <meta-data
+                android:name="worldReadable"
+                android:value="true" />
+
+            <meta-data
+                android:name="settingsActivity"
+                android:value=".ExampleSettingsActivity" />
+        </service>
+
+        <receiver
+            android:name="co.appsdeveloper.forecastweather.AlarmReceiver">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@ref/0x7f0c0006" />
+
+        <activity
+            android:theme="@ref/0x7f0b011b"
+            android:name="com.google.android.gms.appinvite.PreviewActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="com.google.android.gms.appinvite.ACTION_PREVIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@ref/0x01030010"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true" />
+
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:exported="true" />
+
+        <provider
+            android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
+            android:exported="false"
+            android:authorities="com.directionsgps.navigation123.google_measurement_service" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:theme="@ref/0x0103000f"
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="0xfb0" />
+
+        <activity
+            android:theme="@ref/0x7f0b0122"
+            android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" />
+    </application>
+</manifest>
